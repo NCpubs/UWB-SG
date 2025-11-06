@@ -1,0 +1,274 @@
+/*------------------------------------------------------------------------------------------------------------------------*/
+/* |Standard Sizes| xs: 0,   sm: 576px,   md: 768px,   lg: 992px,   xl: 1200px,   xxl: 1400px */
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+/* evenScale (for even spacing and margin based on the number of items in the container) */
+/* Reference: https://www.xcentium.com/blogs/conditionally-applying-css-styles-based-on-element-count */
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+/* Two items */
+.evenScale:nth-child(1):nth-last-child(2),
+.evenScale:nth-child(2):nth-last-child(1) {
+  box-sizing: border-box; width: calc(95%/2); margin: calc(5%/4);
+}
+
+/* Three items */
+.evenScale:nth-child(1):nth-last-child(3),
+.evenScale:nth-child(2):nth-last-child(2),
+.evenScale:nth-child(3):nth-last-child(1) {
+  box-sizing: border-box; width: calc(95%/3); margin: calc(5%/6);
+}
+
+/* Four items */
+.evenScale:nth-child(1):nth-last-child(4),
+.evenScale:nth-child(2):nth-last-child(3),
+.evenScale:nth-child(3):nth-last-child(2),
+.evenScale:nth-child(4):nth-last-child(1) {
+  box-sizing: border-box; width: calc(95%/4); margin: calc(5%/8);
+}
+
+/* Five items */
+.evenScale:nth-child(1):nth-last-child(5),
+.evenScale:nth-child(2):nth-last-child(4),
+.evenScale:nth-child(3):nth-last-child(3),
+.evenScale:nth-child(4):nth-last-child(2),
+.evenScale:nth-child(5):nth-last-child(1) {
+  box-sizing: border-box; width: calc(95%/5); margin: calc(5%/10);
+}
+
+
+@media(max-width: 768px){
+
+  /* Two items */
+  .evenScale:nth-child(1):nth-last-child(3),
+  .evenScale:nth-child(2):nth-last-child(2),
+  .evenScale:nth-child(3):nth-last-child(1) {
+  width: 100%; margin: 1% auto;
+  }
+
+  /* Two items */
+  .evenScale:nth-child(1):nth-last-child(2),
+  .evenScale:nth-child(2):nth-last-child(1) {
+  width: 100%; margin: 1% auto;
+  }
+
+  /* Three items */
+  .evenScale:nth-child(1):nth-last-child(3),
+  .evenScale:nth-child(2):nth-last-child(2),
+  .evenScale:nth-child(3):nth-last-child(1) {
+  width: 100%; margin: 1% auto;
+  }
+
+  /* Four items */
+  .evenScale:nth-child(1):nth-last-child(4),
+  .evenScale:nth-child(2):nth-last-child(3),
+  .evenScale:nth-child(3):nth-last-child(2),
+  .evenScale:nth-child(4):nth-last-child(1) {
+  width: 100%; margin: 1% auto;
+  }
+
+  /* Five items */
+  .evenScale:nth-child(1):nth-last-child(5),
+  .evenScale:nth-child(2):nth-last-child(4),
+  .evenScale:nth-child(3):nth-last-child(3),
+  .evenScale:nth-child(4):nth-last-child(2),
+  .evenScale:nth-child(5):nth-last-child(1) {
+  width: 100%; margin: 1% auto;
+  }
+
+}
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+/* tocBox */
+/*------------------------------------------------------------------------------------------------------------------------*/
+/* A container intended to hold (1) a picutre/icon and (2) a label.
+
+Implementation example:
+
+    <div class="tocBox">
+     <img src="img/img_purpose.jpg" alt="">
+     <p class="Purpose</p>
+    </div>
+..........................................................................................................................*/
+
+.tocBox{
+  max-width: 300px;
+  margin: 1em 3%; 
+  transition: all 0.2s;
+}
+
+.tocBox:hover{
+  transform: scale(1.10) translate(0%, 0%);
+  z-index: 1;
+}
+
+.tocBox img {
+  aspect-ratio: 1/1;
+  max-width: 300px;
+  height: auto;
+  object-position: center;
+  object-fit: cover;
+  border-radius: 10%;
+  box-shadow: 0 0.5em 0.5em -0.5em rgba(30,30,30,0.3);
+  border: none;
+}
+
+.tocBox a{
+  text-align: center;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: var(--color);
+  text-shadow: 0 0.1em 0.1em rgba(30,30,30,0.3);
+  margin-top:1em;
+}
+
+.tocBox a:hover{
+  color: var(--hover);
+}
+
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+/* twoElement */
+/*------------------------------------------------------------------------------------------------------------------------*/
+/* A container intended to hold (1) a picutre/icon and (2) a label.
+
+Implementation example:
+
+    <div class="tocBox">
+     <img src="img/img_purpose.jpg" alt="">
+     <p class="Purpose</p>
+    </div>
+..........................................................................................................................*/
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+/* MISC */
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+.container {
+  display: flex;
+  align-items: stretch;
+}
+
+.left {
+  width: 150px;
+  background-color: lightblue;
+  padding: 10px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.top-right,
+.bottom-right {
+  background-color: lightgreen;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.headlineList{
+  max-width:80%;
+  margin: 1% auto;
+}
+
+.headlineList>li, .headlinelist>ul{
+  list-style-type:none;
+  border:3px solid;
+  border-radius:1em;
+  padding:0.5em 1em;
+  font-size:larger;
+  font-weight:bold;
+}
+
+.mnemonicContainer{
+
+}
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+/* mnemonicContainer */
+/*------------------------------------------------------------------------------------------------------------------------*/
+/* A container intended to hold (1) "mneomnic" label, (2) sentance of text, and (3) a picture. 
+
+Implementation example:
+
+            TODO: Add Example
+..........................................................................................................................*/
+
+.mnemonicContainer{
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px dashed #CC00CC;
+    max-width: 60%;
+    margin: 2% auto;
+    padding: 1%;
+    transition: all 0.2s;
+    background-color: #FFCCFF;
+    color: black;
+}
+
+.mnemonicContainer:hover{
+    transform: scale(1.10) translate(0%, 0%);
+    box-shadow: 0 0.5em 0.5em -0.4em gray;
+    z-index: 1;
+}
+
+.mnemonicContainer>p{
+    font-family: "Merriweather", cursive;
+    /* font-style: italic; */
+    font-size: 3.0rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    text-shadow: -1px -1px 0 black, 1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black;
+}
+
+.mnemonicContainer>div>div>p:nth-of-type(1){
+    font-style: italic;
+}
+
+.mnemonicContainer>div>div>p:nth-of-type(2){
+    font-size: 1.5em;
+}
+
+.mnemonicContainer img{
+    aspect-ratio: 1/1;
+    margin: 0.5em auto;
+    flex: 1 1 200px;
+    max-width: 200px;
+    height: auto;
+    border: 1px solid #CC00CC;
+}
+
+.mnemonicContainer > div{
+    display: flex;
+    justify-content: center;
+}
+
+.mnemonicContainer div > div{
+    display: block;
+    align-content: center;
+}
+
+.mnemonic{
+    color: #CC00CC;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.mnemonic-ref{
+    text-decoration: underline solid #CC00CC;
+}
+
+@media(max-width: 768px){
+    .mnemonicContainer > div {flex-direction: column;}
+    .mnemonicContainer > p {font-size: 2.0rem;}
+}
