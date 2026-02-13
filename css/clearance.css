@@ -1,0 +1,112 @@
+/*
+======================================================
+  THE FLEXBOX MAGIC
+======================================================
+*/
+
+.objectives-list {
+  /* 1. Turn the list into a flex container */
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+  gap: 1rem;       /* Create space between the cards */
+
+  /* 2. Reset list defaults and initialize our custom counter */
+  list-style: none;
+  padding: 0;
+  counter-reset: objectives-counter;
+}
+
+.objectives-list li {
+  /* 3. Style the list items as "cards" */
+  background-color: #f8f9fa;
+
+  border-radius: 1em;
+  padding: 2em;
+  box-shadow: 0 0.25em .5em var(--fill-color-60);
+
+  /* 4. Make items grow and shrink responsively */
+  /* They will try to be ~250px, but can grow/shrink as needed */
+  flex: 1 1 250px;
+
+  /* 5. Use a ::before pseudo-element for the cool number */
+  position: relative;
+  padding-left: 6rem; /* Make space for the large number */
+}
+
+.objectives-list li:nth-of-type(1) {
+  background-color: var(--a2-darker);
+}
+.objectives-list li:nth-of-type(2) {
+  background-color: var(--a4-darker);
+}
+.objectives-list li:nth-of-type(3) {
+  background-color: var(--a6-darker);
+}
+.objectives-list li:nth-of-type(4) {
+  background-color: var(--a8-darker);
+}
+
+.objectives-list li strong {
+  text-decoration: underline;
+  font-size: 1.5rem;
+}
+
+.objectives-list li:nth-of-type(1) strong {
+  color: var(--a2-light);
+}
+
+.objectives-list li:nth-of-type(2) strong {
+  color: var(--a4-light);
+}
+
+.objectives-list li:nth-of-type(3) strong {
+  color: var(--a6-light);
+}
+
+.objectives-list li:nth-of-type(4) strong {
+  color: var(--a8-light);
+}
+
+
+.objectives-list li::before {
+  /* 6. Increment and display our custom counter */
+  counter-increment: objectives-counter;
+  content: counter(objectives-counter);
+
+  /* 7. Style the number to make it look cool! */
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+  transform: translateY(-50%);
+  font-size: 7rem;
+  font-weight: bold;
+  line-height: 1;
+  color: var(--color);
+  z-index: 0; /* Place it behind the text */
+}
+
+.objectives-list li:nth-of-type(1)::before {
+  color: var(--a2-dark);
+}
+
+.objectives-list li:nth-of-type(2)::before {
+  color: var(--a4-dark);
+}
+
+.objectives-list li:nth-of-type(3)::before {
+  color: var(--a6-dark);
+}
+
+.objectives-list li:nth-of-type(4)::before {
+  color: var(--a8-dark);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.grid-item {
+  border: 1px dotted var(--color);
+}

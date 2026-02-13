@@ -1,0 +1,52 @@
+.node {
+  color: var(--opposite-color);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  position: relative;
+  box-shadow: 0 0.5rem 0.8rem var(--fill-color-80);
+  font-weight: bold;
+  font-size: 1.25rem;
+  min-height: 5rem;
+  width: clamp(50px, 90%, 500px);
+  transition: transform 0.3s ease;
+}
+
+.node:hover {
+  transform: translateY(-0.5rem); /* Lifts the card up on hover */
+}
+
+.chains-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  padding: 1em;
+}
+
+.chain-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  position: relative;
+  max-width: 80%;
+  padding: 1%;
+  margin: 1%;
+}
+
+.org-chart {
+  text-align: center;
+}
+
+.program-chain {
+  border: 0.3rem dotted var(--a7-dark);
+}
+
+.contracting-chain {
+  border: 0.3rem dotted var(--a9-dark);
+}

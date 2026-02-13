@@ -1,0 +1,193 @@
+/*
+========================================
+  THE FLEXBOX CARD CONTAINER
+========================================
+*/
+.card-container {
+  display: flex; /* 1. Turns this div into a flex container */
+  justify-content: center; /* 2. Centers the cards horizontally */
+  flex-wrap: wrap; /* 3. Allows cards to stack on smaller screens */
+  gap: 1em; /* 4. Creates consistent space between cards */
+}
+
+/*
+========================================
+  THE INDIVIDUAL CARDS
+========================================
+*/
+.card {
+  /* background-color: var(--fill-color-50); */
+  /* border: 1px solid var(--color); */
+  border-radius: 2em;
+  box-shadow: 0 0.25em 0.5em var(--fill-color-60);
+  padding: 2em;
+  text-align: center;
+
+  /* Flex properties for responsive sizing */
+  flex: 1 1 300px; /* Grow, Shrink, Basis -> each card will try to be 300px wide */
+  max-width: 350px;
+
+  /* Transition for a smooth hover effect */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover,
+.phase:hover {
+  transform: translateY(-0.5rem); /* Lifts the card up on hover */
+  box-shadow: 0 0.25em 0.5em var(--fill-color-60);
+}
+
+/*
+========================================
+  CARD CONTENT STYLING
+========================================
+*/
+.card img {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.card-title {
+  font-size: 3rem;
+}
+
+.card-subtitle {
+  font-size: 1.5rem;
+}
+
+/*
+================================================================================
+  APPROPRIATION LIFECYCLE
+================================================================================
+*/
+
+/*
+========================================
+  THE FLEXBOX TIMELINE CONTAINER
+========================================
+*/
+.timeline-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Makes sure cards are equal height by default */
+  flex-wrap: wrap;
+  gap: 4em 2em; /* Vertical and horizontal gap */
+  position: relative;
+}
+
+/*
+========================================
+  THE INDIVIDUAL PHASE CARDS
+========================================
+*/
+.phase {
+  background-color: var(--fill-color);
+  border-radius: 1rem;
+  box-shadow: 0 0.25em 0.5em var(--fill-color-60);
+  border-top: 0.75em solid; /* Creates the colored top border */
+  padding: 2em;
+
+  flex: 1 1 280px; /* Grow, Shrink, Basis -> responsive sizing */
+  max-width: 350px;
+
+  position: relative; /* Crucial for positioning the arrow */
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* --- Unique Colors for Each Phase --- */
+.phase.current {
+  border-color: var(--b5-normal);
+  background-color: var(--a5-normal);
+}
+.phase.expired {
+  border-color: var(--b3-normal);
+  background-color: var(--a3-normal);
+}
+.phase.cancelled {
+  border-color: var(--b1-normal);
+  background-color: var(--a1-normal);
+}
+
+.phase.current h3 {
+  color: var(--b5-darker);
+}
+.phase.expired h3 {
+  color: var(--b3-darker);
+}
+.phase.cancelled h3 {
+  color: var(--b1-darker);
+}
+
+.phase.current strong {
+  color: var(--b5-darker);
+  font-weight: bold;
+  text-decoration: underline;
+}
+.phase.expired strong {
+  color: var(--b3-darker);
+  font-weight: bold;
+  text-decoration: underline;
+}
+.phase.cancelled strong {
+  color: var(--b1-darker);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/*
+========================================
+  THE CONNECTING ARROWS (Pseudo-element Magic)
+========================================
+*/
+/* Select the pseudo-element for every phase EXCEPT the last one */
+.phase:not(:last-child)::after {
+  content: '\2B9E'; /* You can use any arrow character, e.g., '➔' or '\2794' */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Vertically centers the arrow */
+
+  /* Position the arrow in the gap between cards */
+  right: -3rem;
+
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--subtle-color);
+  text-shadow: 0 2px 3px var(--opposite-color);
+  z-index: 1;
+}
+
+/*
+========================================
+  CARD CONTENT STYLING
+========================================
+*/
+.phase-header h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.phase-content p {
+  margin: 0.5rem 0;
+  color: var(--opposite-color);
+  line-height: 1.6;
+}
+
+/*
+========================================
+  RESPONSIVENESS FOR MOBILE
+========================================
+*/
+@media (max-width: 992px) {
+  /* On smaller screens, the cards will wrap. The arrows pointing
+     to the right don't make sense anymore, so we hide them. */
+  .phase:not(:last-child)::after {
+    display: none;
+  }
+}

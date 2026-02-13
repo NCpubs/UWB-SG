@@ -1,0 +1,105 @@
+table {
+  margin: 1em auto;
+  border: 1px solid var(--opposite-color);
+  min-width: 50%;
+  max-width: 90%;
+  color: var(--opposite-color);
+  background-color: var(--subtle-color);
+}
+
+table,
+th,
+td {
+  border: 1px solid var(--opposite-color);
+  border-collapse: collapse;
+  vertical-align: middle;
+}
+
+th,
+td {
+  padding: 0.5rem;
+}
+
+tbody th {
+  background-color: unset;
+}
+
+th {
+  font-weight: bold;
+  background-color: var(--primary-color);
+  padding: 0.25em;
+}
+
+thead {
+  background-color: var(--subtle-color);
+}
+
+tr td:first-child {
+  text-align: center;
+}
+
+tr:nth-child(-n + 61) {
+  background-color: var(--a8-lighter);
+  color: var(--opposite-color);
+}
+tr:nth-child(-n + 58) {
+  background-color: var(--a7-lighter);
+  color: var(--opposite-color);
+}
+tr:nth-child(-n + 47) {
+  background-color: var(--a6-lighter);
+  color: var(--opposite-color);
+}
+tr:nth-child(-n + 38) {
+  background-color: var(--a5-lighter);
+  color: var(--opposite-color);
+}
+tr:nth-child(-n + 30) {
+  background-color: var(--a4-lighter);
+  color: var(--opposite-color);
+}
+tr:nth-child(-n + 21) {
+  background-color: var(--a3-lighter);
+  color: var(--opposite-color);
+}
+tr:nth-child(-n + 14) {
+  background-color: var(--a2-lighter);
+  color: var(--opposite-color);
+}
+tr:nth-child(-n + 5) {
+  background-color: var(--a1-lighter);
+  color: var(--opposite-color);
+}
+
+tr:nth-child(59) {
+  background-color: var(--b8-darker);
+  color: var(--color);
+}
+tr:nth-child(48) {
+  background-color: var(--b7-darker);
+  color: var(--color);
+}
+tr:nth-child(39) {
+  background-color: var(--b6-darker);
+  color: var(--color);
+}
+tr:nth-child(31) {
+  background-color: var(--b5-darker);
+  color: var(--color);
+}
+tr:nth-child(22) {
+  background-color: var(--b4-darker);
+  color: var(--color);
+}
+tr:nth-child(15) {
+  background-color: var(--b3-darker);
+  color: var(--color);
+}
+tr:nth-child(6) {
+  background-color: var(--b2-darker);
+  color: var(--color);
+}
+tr:nth-child(1) {
+  background-color: var(--b1-darker);
+  color: var(--color);
+}

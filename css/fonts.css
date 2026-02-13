@@ -1,0 +1,46 @@
+/*------------------------------------------------------------------------------------------------------------------------*/
+/* Fonts */
+/*    References: */
+/*    https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face */
+/*    https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide */
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+@font-face {
+    font-family: "Italiana";
+    src: url("../assets/fonts/Italiana/Italiana-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Merriweather";
+    src: url("../assets/fonts/Merriweather/Merriweather-VariableFont_opsz,wdth,wght.ttf");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../assets/fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../assets/fonts/Roboto/Roboto-Italic-VariableFont_wdth,wght.ttf");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "RougeScript";
+    src: url("../assets/fonts/Rouge_Script/RougeScript-Regular.ttf");
+}
+
+@font-face {
+    font-family: "MeowScript";
+    src: url("../assets/fonts/Meow_Script/MeowScript-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Anton";
+    src: url("../assets/fonts/Anton/Anton-Regular.ttf");
+}
+
