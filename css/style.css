@@ -208,6 +208,35 @@ h4 {
   font-style: italic;
 }
 
+.mnemonic {
+  border: 1px dotted var(--mnemonic);
+  background-color: var(--mnemonic-bg);
+}
+
+.mnemonic label {
+  display: block;
+}
+
+.mnemonic img {
+  aspect-ratio: 1 / 1;
+  width: clamp(100px, 200px, 300px);
+  height: auto;
+  border-radius: 10%;
+}
+
+.mnemonic-letter {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--mnemonic);
+}
+
+.mnemonic-word {
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: underline;
+  color: var(--mnemonic);
+}
+
 .one-b {
   font-weight: bold;
   color: #c00000;
