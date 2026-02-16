@@ -6,41 +6,83 @@
 /*------------------------------------------------------------------------------------------------------------------------*/
 
 @font-face {
-    font-family: "Italiana";
-    src: url("../assets/fonts/Italiana/Italiana-Regular.ttf");
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Anton';
+  src: url('../assets/fonts/Anton/Anton-Regular.ttf');
 }
 
 @font-face {
-    font-family: "Merriweather";
-    src: url("../assets/fonts/Merriweather/Merriweather-VariableFont_opsz,wdth,wght.ttf");
+  font-family: 'Italiana';
+  src: url('../assets/fonts/Italiana/Italiana-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "Roboto";
-    src: url("../assets/fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf");
-    font-style: normal;
+  font-family: 'MeowScript';
+  src: url('../assets/fonts/Meow_Script/MeowScript-Regular.ttf');
 }
 
 @font-face {
-    font-family: "Roboto";
-    src: url("../assets/fonts/Roboto/Roboto-Italic-VariableFont_wdth,wght.ttf");
-    font-style: italic;
+  font-family: 'Merriweather';
+  src: url('../assets/fonts/Merriweather/Merriweather-VariableFont_opsz,wdth,wght.ttf');
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "RougeScript";
-    src: url("../assets/fonts/Rouge_Script/RougeScript-Regular.ttf");
+  font-family: 'Merriweather';
+  src: url('../assets/fonts/Merriweather/Merriweather-Italic-VariableFont_opsz\,wdth\,wght.ttf');
+  font-style: italic;
 }
 
 @font-face {
-    font-family: "MeowScript";
-    src: url("../assets/fonts/Meow_Script/MeowScript-Regular.ttf");
+  font-family: 'PassionOne';
+  src: url('../assets/fonts/Passion_One/PassionOne-Regular.ttf');
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "Anton";
-    src: url("../assets/fonts/Anton/Anton-Regular.ttf");
+  font-family: 'PassionOne';
+  src: url('../assets/fonts/Passion_One/PassionOne-Bold.ttf');
+  font-style: bold;
 }
 
+@font-face {
+  font-family: 'Playfair';
+  src: url('../assets/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Playfair';
+  src: url('../assets/fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto/Roboto-Italic-VariableFont_wdth,wght.ttf');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'RougeScript';
+  src: url('../assets/fonts/Rouge_Script/RougeScript-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'SourGummy';
+  src: url('../assets/fonts/Sour_Gummy/SourGummy-VariableFont_wdth\,wght.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SourGummy';
+  src: url('../assets/fonts/Sour_Gummy/SourGummy-Italic-VariableFont_wdth\,wght.ttf');
+  font-style: italic;
+}

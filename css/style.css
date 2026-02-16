@@ -163,7 +163,7 @@ h1 {
 
 h2 {
   color: var(--tertiary-color);
-  margin: 1rem 0 1rem 0;
+  margin: 3rem 0 1rem 0;
   font-size: 1.5rem;
   border-bottom: 0.1rem solid;
   font-family:
@@ -172,7 +172,7 @@ h2 {
 
 h3 {
   color: var(--tertiary-color);
-  margin: 2rem 0 1rem 0;
+  margin: 2rem 0 0 0;
   font-size: 1rem;
   border-bottom: 0.1rem dotted;
   font-family:
@@ -208,33 +208,102 @@ h4 {
   font-style: italic;
 }
 
-.mnemonic {
-  border: 1px dotted var(--mnemonic);
+.mnemonic-card {
+  border: 3px dotted var(--mnemonic-dark);
   background-color: var(--mnemonic-bg);
+  margin: 2rem auto;
+  padding: 1.5rem;
+  width: clamp(300px, 600px, 800px);
+  max-width: 100%;
 }
 
-.mnemonic label {
+.mnemonic-card h4 {
   display: block;
+  text-align: center;
+  margin: 0 0 1rem 0;
+  padding: 0;
+  font-size: 2rem;
+  font-family: 'SourGummy', cursive;
+  text-shadow:
+    -1px -1px 0 var(--fill-color-30),
+    1px -1px 0 var(--fill-color-30),
+    -1px 1px 0 var(--fill-color-30),
+    1px 1px 0 var(--fill-color-30),
+    0 0.5rem 0.5rem var(--fill-color-50);
 }
 
-.mnemonic img {
+.mnemonic-card h4 span:nth-child(1) {
+  color: red;
+}
+.mnemonic-card h4 span:nth-child(2) {
+  color: orange;
+}
+.mnemonic-card h4 span:nth-child(3) {
+  color: yellow;
+}
+.mnemonic-card h4 span:nth-child(4) {
+  color: green;
+}
+.mnemonic-card h4 span:nth-child(5) {
+  color: blue;
+}
+.mnemonic-card h4 span:nth-child(6) {
+  color: indigo;
+}
+.mnemonic-card h4 span:nth-child(7) {
+  color: violet;
+}
+.mnemonic-card h4 span:nth-child(8) {
+  color: red;
+} /* loops back around */
+
+.mnemonic-content {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.mnemonic-text {
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  width: 100%;
+  text-shadow: 0 0.1rem 0.5rem var(--fill-color-50);
+}
+
+.mnemonic-text p:nth-of-type(1) {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--soft-color);
+}
+
+.mnemonic-text p:nth-of-type(2) {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
+
+.mnemonic-card img {
   aspect-ratio: 1 / 1;
   width: clamp(100px, 200px, 300px);
+  max-width: 100%;
   height: auto;
   border-radius: 10%;
+  object-fit: cover;
+  box-shadow: 0 0.1rem 0.5rem var(--fill-color-50);
 }
 
 .mnemonic-letter {
   font-weight: bold;
-  font-size: 1.5rem;
-  color: var(--mnemonic);
+  font-size: 1.5em;
+  color: var(--mnemonic-dark);
 }
 
 .mnemonic-word {
   font-weight: bold;
   font-size: 1.1rem;
   text-decoration: underline;
-  color: var(--mnemonic);
+  color: var(--mnemonic-light);
 }
 
 .one-b {
@@ -251,7 +320,17 @@ section {
   background-color: var(--fill-color-60);
   padding: 2rem;
   border-radius: 2rem;
-  margin: 1rem 0;
+  margin: 2rem 0;
+}
+
+section section {
+  background-color: var(--opposite-color-50);
+  box-shadow: 0 0 6px 3px var(--opposite-color);
+}
+
+section h2:first-child,
+section h3:first-child {
+  margin-top: 0;
 }
 
 strong {
@@ -292,6 +371,7 @@ td {
 
 th {
   font-weight: bold;
+  color: var(--soft-color);
   background-color: var(--fill-color-80);
 }
 
@@ -300,8 +380,8 @@ th {
 }
 
 tbody th {
-  background-color: var(--fill-color-80);
-  color: var(--secondary-color);
+  background-color: var(--secondary-color);
+  color: var(--soft-color);
   font-weight: normal;
   font-style: italic;
   padding: 0.2rem;
@@ -346,6 +426,81 @@ tbody th {
   border: 2px dotted var(--subtle-color);
   background-color: var(--fill-color-30);
   padding: 2rem 3rem;
+  box-shadow: 0 0 30px 5px var(--secondary-color);
+}
+
+/* =========================================
+   Roles
+   ========================================= */
+
+.role-sae {
+  font-weight: bold;
+  background-color: var(--a8-light);
+  color: var(--a8-darkest);
+}
+.role-spe {
+  font-weight: bold;
+  background-color: var(--a8-light);
+  color: var(--a8-darkest);
+}
+
+.role-peo {
+  font-weight: bold;
+  background-color: var(--a7-light);
+  color: var(--a7-darkest);
+}
+.role-sml {
+  font-weight: bold;
+  background-color: var(--a7-normal);
+  color: var(--a7-darkest);
+}
+.role-ml {
+  font-weight: bold;
+  background-color: var(--a7-darker);
+  color: var(--a7-lightest);
+}
+
+.role-hca {
+  font-weight: bold;
+  background-color: var(--a9-light);
+  color: var(--a9-darkest);
+}
+.role-sco {
+  font-weight: bold;
+  background-color: var(--a9-normal);
+  color: var(--a9-darkest);
+}
+.role-coco {
+  font-weight: bold;
+  background-color: var(--a9-dark);
+  color: var(--a9-lightest);
+}
+
+.role-comp-advocate {
+  font-weight: bold;
+  background-color: var(--a2-normal);
+  color: var(--a2-darkest);
+}
+.role-ombudsman {
+  font-weight: bold;
+  background-color: var(--a3-normal);
+  color: var(--a3-darkest);
+}
+.role-mda {
+  font-weight: bold;
+  background-color: var(--a4-normal);
+  color: var(--a4-darkest);
+}
+.role-sada {
+  font-weight: bold;
+  background-color: var(--a5-normal);
+  color: var(--a5-darkest);
+}
+
+.role-pco {
+  font-weight: bold;
+  background-color: var(--soft-color);
+  color: var(--opposite-color);
 }
 
 /* =========================================
@@ -373,37 +528,120 @@ tbody th {
 /* Base indentation */
 ul {
   list-style-type: disc;
-  padding-left: 1rem;
+  padding-left: 2rem;
 }
 
 /* Second-level UL */
 ul ul {
   list-style-type: circle;
-  padding-left: 1.5rem;
+  padding-left: 2.5rem;
 }
 
 /* Third-level UL */
 ul ul ul {
   list-style-type: square;
-  padding-left: 2rem;
+  padding-left: 3rem;
 }
 
 /* Base indentation */
 ol {
   list-style-type: decimal;
-  padding-left: 1rem;
+  padding-left: 2rem;
 }
 
 /* Second-level ol */
 ol ol {
   list-style-type: lower-alpha;
-  padding-left: 1.5rem;
+  padding-left: 2.5rem;
 }
 
 /* Third-level ol */
 ol ol ol {
   list-style-type: lower-roman;
+  padding-left: 3rem;
+}
+
+li {
+  line-height: 1.3em;
+  padding-bottom: 0.3rem;
+  text-indent: 0.5rem;
+}
+
+/* Base indentation */
+ol {
+  list-style-type: decimal;
   padding-left: 2rem;
+}
+
+/* Second-level ol */
+ol ol {
+  list-style-type: lower-alpha;
+  padding-left: 2.5rem;
+}
+
+/* Third-level ol */
+ol ol ol {
+  list-style-type: lower-roman;
+  padding-left: 3rem;
+}
+
+li {
+  text-indent: 0rem; /* pulls first line left */
+  padding-left: 1rem; /* pushes all lines right equally */
+  line-height: 1.3em;
+  padding-bottom: 0.3rem;
+}
+
+li::marker {
+  color: var(--soft-color);
+}
+
+/* =========================================
+   Feature List
+   ========================================= */
+.feature-list {
+  margin-top: 1rem;
+  padding-left: 0;
+}
+
+/* Base indentation */
+.feature-list ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+}
+
+/* Second-level UL */
+.feature-list ul ul {
+  list-style-type: circle;
+  padding-left: 2.5rem;
+}
+
+/* Third-level UL */
+.feature-list ul ul ul {
+  list-style-type: square;
+  padding-left: 3rem;
+}
+
+.feature-list > li {
+  list-style-type: none;
+  border-top: 1px dotted var(--soft-color);
+}
+
+.feature-list > li:last-of-type {
+  border-bottom: 1px dotted var(--soft-color);
+}
+
+.feature-list > li span {
+  display: block;
+  margin: 1rem 0 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 0.5rem var(--fill-color-80);
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+.feature-list li > span:hover {
+  transform: translateY(-0.3rem); /* Lifts the card up on hover */
 }
 
 /* =========================================
@@ -582,24 +820,6 @@ ol ol ol {
 }
 
 /* =========================================
-   Feature List
-   ========================================= */
-
-.feature-list > li {
-  list-style-type: none;
-  padding: 0.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 0.5rem 0.5rem var(--fill-color-80);
-  margin: 1rem 0 0.5rem 0;
-  font-size: 1.2rem;
-  transition: transform 0.3s ease;
-}
-
-.feature-list > li:hover {
-  transform: translateY(-0.3rem); /* Lifts the card up on hover */
-}
-
-/* =========================================
    ANIMATED BORDER
    ========================================= */
 
@@ -735,5 +955,9 @@ ol ol ol {
 
   table {
     font-size: 0.8rem;
+  }
+
+  .mnemonic-content {
+    flex-direction: column;
   }
 }

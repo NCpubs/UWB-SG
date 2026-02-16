@@ -20,6 +20,7 @@
   /* Forced dark theme */
   --color: #f1f1dc;
   --opposite-color: #2d2e37;
+  --opposite-color-50: #2d2e3780;
   --bg-color: #05111d;
   --hover-color: #eccda1;
   --fill-color: rgba(0, 0, 0, 1);
@@ -32,8 +33,9 @@
   --fill-color-70: rgba(0, 0, 0, 0.7);
   --fill-color-80: rgba(0, 0, 0, 0.8);
   --fill-color-90: rgba(0, 0, 0, 0.9);
-  --mnemonic: rgba(204, 0, 204, 1);
-  --mnemonic-bg: rgba(243, 150, 243, 0.8);
+  --mnemonic-dark: rgba(180, 0, 180, 1);
+  --mnemonic-light: rgba(220, 100, 220, 1);
+  --mnemonic-bg: rgba(240, 160, 240, 1);
   /* ^ ^ ^ ^ ^ ^ ^ ^ ^ */
 
   --heading-font: 'Italiana', serif;
@@ -43,8 +45,9 @@
   --primary-color-80: #8f7625cc;
   --primary-color-90: #8f7625e6;
   --secondary-color: #8192a6;
-  --tertiary-color: #d9d9d9;
   --accent-color: #db5b3d;
+  --soft-color: #b8b8b8;
+  --soft-color-50: #b8b8b880;
   --subtle-color: #cde2eb;
 
   --primary-ka-color: #d5c837;
