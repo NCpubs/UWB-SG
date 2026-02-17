@@ -381,7 +381,7 @@ th {
 
 tbody th {
   background-color: var(--secondary-color);
-  color: var(--soft-color);
+  color: var(--color);
   font-weight: normal;
   font-style: italic;
   padding: 0.2rem;
