@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+  alert("Hello world.");
+  
   const tableBody = document.querySelector('table tbody');
 
   // Add a single click listener to the table body
