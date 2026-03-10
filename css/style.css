@@ -311,6 +311,16 @@ h4 {
   color: #c00000;
 }
 
+.open-links-btn {
+      padding: 8px 12px;
+      font-weight: bold;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+}
+
 p {
   margin: 1rem 0;
   line-height: 1.5rem;
@@ -381,7 +391,7 @@ th {
 
 tbody th {
   background-color: var(--secondary-color);
-  color: var(--soft-color);
+  color: var(--color);
   font-weight: normal;
   font-style: italic;
   padding: 0.2rem;
@@ -637,11 +647,33 @@ li::marker {
   padding: 0.5rem;
   border-radius: 1rem;
   box-shadow: 0 0.5rem 0.5rem var(--fill-color-80);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   transition: transform 0.3s ease;
 }
+
 .feature-list li > span:hover {
   transform: translateY(-0.3rem); /* Lifts the card up on hover */
+}
+
+
+/* --- Inline Numbered List --- */
+
+/* 1. Reset the counter and hide the default browser styling */
+.inline-numbers {
+  list-style: none;         /* Hides the default 1. 2. 3. markers */
+  padding-left: 0;          /* Removes the default indentation */
+  counter-reset: item-counter; /* Creates a new counter named "item-counter" */
+}
+
+/* 2. Create the custom number using a ::before pseudo-element */
+.inline-numbers > li span::before {
+  counter-increment: item-counter; /* Increments our counter by 1 for each <li> */
+  content: counter(item-counter) ". "; /* Displays the counter's value, a period, and a space */
+
+  /* 3. Style your custom number! */
+  font-weight: bold;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 /* =========================================
