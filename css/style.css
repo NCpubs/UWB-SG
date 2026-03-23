@@ -343,6 +343,10 @@ section h3:first-child {
   margin-top: 0;
 }
 
+small {
+  display: block;
+}
+
 strong {
   color: var(--accent-color);
 }
