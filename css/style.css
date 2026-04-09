@@ -446,6 +446,11 @@ tbody th {
 /* =========================================
    Roles
    ========================================= */
+.role-dae {
+  font-weight: bold;
+  background-color: var(--a8-lightest);
+  color: var(--a8-darkest);
+}
 
 .role-sae {
   font-weight: bold;
@@ -458,7 +463,7 @@ tbody th {
   color: var(--a8-darkest);
 }
 
-.role-peo {
+.role-pae {
   font-weight: bold;
   background-color: var(--a7-light);
   color: var(--a7-darkest);
@@ -512,6 +517,12 @@ tbody th {
 }
 
 .role-pco {
+  font-weight: bold;
+  background-color: var(--soft-color);
+  color: var(--opposite-color);
+}
+
+.role-other {
   font-weight: bold;
   background-color: var(--soft-color);
   color: var(--opposite-color);
