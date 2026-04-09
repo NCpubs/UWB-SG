@@ -2,17 +2,36 @@
   padding: 1rem 2rem;
   border-radius: 1rem;
   margin: 0.5rem;
-  display: flex;
   align-items: center;
   justify-content: center;
   justify-self: center;
+align-content: center;
   position: relative;
   box-shadow: 0 0.5rem 0.8rem var(--fill-color-80);
-  font-weight: bold;
   font-size: 1.25rem;
   min-height: 5rem;
-  width: clamp(50px, 90%, 500px);
   transition: transform 0.3s ease;
+height: 100%;
+max-width: 100%;
+}
+
+.node div:nth-of-type(1) {
+  font-weight: bold;
+  margin: 0.5rem auto;
+white-space: pre-wrap;
+}
+
+.node div:nth-of-type(2) {
+  font-weight: normal;
+  font-size: 0.9rem;
+white-space: pre-wrap;
+}
+
+.node a {
+  font-weight: normal;
+  color: unset;
+  text-shadow: unset;
+  text-decoration: underline dotted;
 }
 
 .node:hover {
@@ -24,7 +43,8 @@
   justify-content: center;
   position: relative;
   width: 100%;
-  padding: 1em;
+  padding: 1rem;
+gap: 1rem;
 }
 
 .chain-col {
@@ -33,13 +53,17 @@
   align-items: center;
   margin: 0;
   position: relative;
-  max-width: 80%;
+  width: 100%;
   padding: 1%;
   margin: 1%;
 }
 
 .org-chart {
   text-align: center;
+}
+
+.secretary-chain {
+  border: 0.3rem dotted var(--a8-dark);
 }
 
 .program-chain {
@@ -49,3 +73,61 @@
 .contracting-chain {
   border: 0.3rem dotted var(--a9-dark);
 }
+
+    /*
+    ========================================
+      THE GRID CONTAINER
+    ========================================
+    */
+    .grid-container {
+      /* 1. Turn this element into a grid container */
+      display: grid; 
+
+      /* 2. Define the columns: 3 columns of equal fractional width */
+      grid-template-columns: 1fr 1fr 1fr;
+
+      /* 3. Define the rows: 4 rows */
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+
+      /* 4. Create a 10px gap between all grid items */
+      gap: 10px; 
+
+      margin: 1rem auto;
+      max-width: 100%;
+
+    }
+
+
+    /*
+    ========================================
+      THE GRID ITEMS (Children)
+    ========================================
+    */
+    .grid-item {
+      color: white;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      display: grid; /* Optional: helps center content inside */
+      place-items: center; /* Optional: helps center content inside */
+    }
+
+    /*
+    ========================================
+      THE MERGED ITEMS (The Key Part)
+    ========================================
+    */
+    .header {
+      /*
+        Tell this item to start at column line 1 and span all 3 columns.
+        A 3-column grid has 4 lines (1, 2, 3, 4). Spanning from 1 to 4 covers all columns.
+      */
+      grid-column: 1 / 4;
+    }
+
+    .nav {
+      /*
+        A simpler way to say "span the full width" is to start at line 1
+        and end at line -1 (the last line).
+      */
+      grid-column: 1 / -1;
+    }
