@@ -1,0 +1,107 @@
+.card-container {
+  display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 1rem;
+}
+
+.card {
+  border: 1px solid red;
+  border-radius: 1rem;
+  background-color: yellow;
+
+  flex: 1 1 300px; /* Grow, Shrink, Basis -> each card will try to be 300px wide */
+  max-width: 350px;
+
+  align-content: center;
+  text-align: center;
+  font-size: 2rem;
+  color: black;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-0.5rem); /* Lifts the card up on hover */
+  box-shadow: 0 0.25em .5em var(--fill-color-60);
+}
+
+.grid-container {
+  /* 1. Turn this element into a grid container */
+  display: grid; 
+
+  /* 2. Define the columns: */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  /* 3. Define the rows: */
+  grid-auto-rows: auto;
+
+  /* 4. Create a gap between all grid items */
+  gap: 1rem; 
+
+  /* 5. Set other properties: */
+  margin: 1rem auto;
+
+}
+
+.grid-item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: var(--color);
+  border-radius: 1rem;
+  place-items: center; /* Optional: helps center content inside */
+  font-size: 1.1rem;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item.bg-a5-darker:hover {
+  transform: translateY(-0.5rem); /* Lifts the card up on hover */
+  box-shadow: 0 0.5em 0.5em var(--a5-darkest);
+}
+
+.grid-item.bg-a7-darker:hover {
+  transform: translateY(-0.5rem); /* Lifts the card up on hover */
+  box-shadow: 0 0.5em 0.5em var(--a7-darkest);
+}
+
+.grid-item.bg-a9-darker:hover {
+  transform: translateY(-0.5rem); /* Lifts the card up on hover */
+  box-shadow: 0 0.5em 0.5em var(--a9-darkest);
+}
+
+.grid-item div, .grid-item h3 {
+position: relative;
+z-index: 3;
+}
+
+.grid-item h3 {
+  border-bottom: none;
+  font-size: 2rem;
+  margin: 1rem auto;
+}
+
+.grid-item li {
+  text-align: left;
+}
+
+.grid-item div:nth-of-type(1) {
+  font-size: 5rem;
+  padding: 0;
+  margin:0;
+  z-index: 0;
+  text-shadow: 0 0.25rem 0.1rem var(--fill-color-60);
+}
+
+.grid-item div:nth-of-type(2) {
+  margin-bottom: 2rem;
+}
+
+.grid-item div:nth-of-type(3) {
+  color: var(--opposite-color);
+  border-radius: 1rem;
+  margin-top: auto;
+  padding: 0.25rem;
+}
