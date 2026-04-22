@@ -30,7 +30,7 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: grid; 
 
   /* 2. Define the columns: */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
   /* 3. Define the rows: */
   grid-auto-rows: auto;
@@ -55,39 +55,44 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0.5em 0.5em var(--fill-color-60);
 }
 
-.grid-item.bg-a5-darker:hover {
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  flex: 1 1 auto;
+  width: 300px;
+  max-width: 100%;
+  color: var(--color);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0.5em 0.5em var(--fill-color-60);
+}
+
+.grid-item:hover, .flex-item:hover {
   transform: translateY(-0.5rem); /* Lifts the card up on hover */
-  box-shadow: 0 0.5em 0.5em var(--a5-darkest);
+  box-shadow: 0 0.8em 0.8em var(--fill-color-80);
 }
 
-.grid-item.bg-a7-darker:hover {
-  transform: translateY(-0.5rem); /* Lifts the card up on hover */
-  box-shadow: 0 0.5em 0.5em var(--a7-darkest);
-}
-
-.grid-item.bg-a9-darker:hover {
-  transform: translateY(-0.5rem); /* Lifts the card up on hover */
-  box-shadow: 0 0.5em 0.5em var(--a9-darkest);
-}
-
-.grid-item div, .grid-item h3 {
-position: relative;
-z-index: 3;
-}
-
-.grid-item h3 {
+.grid-item h4, .flex-item h4 {
   border-bottom: none;
   font-size: 2rem;
   margin: 1rem auto;
 }
 
-.grid-item li {
+.grid-item li, .flex-item li {
   text-align: left;
 }
 
-.grid-item div:nth-of-type(1) {
+.letter-callout {
   font-size: 5rem;
   padding: 0;
   margin:0;
@@ -95,13 +100,23 @@ z-index: 3;
   text-shadow: 0 0.25rem 0.1rem var(--fill-color-60);
 }
 
-.grid-item div:nth-of-type(2) {
-  margin-bottom: 2rem;
+.grid-item div:nth-of-type(2), .flex-item div:nth-of-type(2) {
+  margin-bottom: 1rem;
 }
 
-.grid-item div:nth-of-type(3) {
+.grid-item div:nth-of-type(3){
   color: var(--opposite-color);
   border-radius: 1rem;
   margin-top: auto;
   padding: 0.25rem;
+}
+
+.flex-item>h4 {
+  text-align: center;
+  border-bottom: 1px solid var(--color);
+}
+
+.flex-item>a {
+  display: block;
+  text-align: center;
 }
