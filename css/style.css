@@ -208,6 +208,13 @@ h4 {
   font-style: italic;
 }
 
+.last-update {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: var(--soft-color-50);
+  text-align: center;
+}
+
 .mnemonic-card {
   border: 3px dotted var(--mnemonic-dark);
   background-color: var(--mnemonic-bg);
@@ -986,6 +993,12 @@ li::marker {
     width: 93vw;
   }
 
+  section {
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 1rem 0;
+  }
+
   table {
     font-size: 0.9rem;
   }
@@ -998,6 +1011,12 @@ li::marker {
 
   body {
     width: 93vw;
+  }
+
+  section {
+    padding: 0.25rem;
+    border-radius: 1rem;
+    margin: 0.25rem 0;
   }
 
   table {
